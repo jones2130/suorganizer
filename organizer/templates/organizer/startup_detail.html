@@ -7,6 +7,9 @@
 {% block content %}
 <article>
     <h2>{{ startup.name }}</h2>
+    <p>
+        <a href="{% url 'organizer_newslink_create' %}">Add Article</a>
+    </p>
     <dl>
         <dt>Date Founded</dt>
         <dd>{{ startup.founded_date|date:"F js, Y" }}</dd>

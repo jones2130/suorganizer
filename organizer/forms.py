@@ -1,7 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
 
-from .models import NewsLink, Tag
+from .models import NewsLink, Startup, Tag
 
 class NewsLinkForm(forms.ModelForm):
     class Meta:
@@ -26,4 +26,4 @@ class TagForm(SlugCleanMixin, forms.ModelForm):
     
     class Meta:
         model = Tag
-        exclude = tuple()
+        fields = '__all__'
