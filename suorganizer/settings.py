@@ -25,9 +25,15 @@ SECRET_KEY = 'rnm)l62g68+9*g4_a4ddmtw-edo#9q%ul-$h31e&^06!w04$i2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
-
+#Email
+#https://docs.djangoproject.com/en/1.9/topics/email/
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+SERVER_EMAIL = 'jones2130@gmail.com'
+DEFAULT_FROM_EMAIL = 'no-reply@django-unleashed.com'
+EMAIL_SUBJECT_PREFIX = '[Startup Organizer]'
+MANAGERS = (('Us', 'ourselves@django-unleashed.com'))
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,8 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'organizer',
     'blog',
+    'contact',
+    'organizer',
 ]
 
 MIDDLEWARE_CLASSES = [
